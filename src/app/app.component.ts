@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Gurbani from '../assets/gurbani.json';
 
 @Component({
   selector: 'app-root',
