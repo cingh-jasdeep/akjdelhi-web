@@ -1,4 +1,38 @@
 ---
 label: Live
 hide_body: true
-fields: []
+fields:
+- name: url
+  type: text
+  config:
+    required: true
+  label: Url
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: end_date
+  type: datetime
+  label: End Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: source
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - YT
+    - FB
+    - mp3
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Source
