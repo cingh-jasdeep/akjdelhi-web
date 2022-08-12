@@ -3,7 +3,20 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: programs.json
+  label: Programs
+  match: "**/*"
+  read_only: false
+- type: document
+  path: recordings.json
+  label: Recordings
+  match: "**/*"
+- type: document
+  path: live.json
+  label: Live
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
