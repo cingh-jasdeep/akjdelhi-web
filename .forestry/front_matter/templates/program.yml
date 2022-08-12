@@ -43,3 +43,5 @@ fields:
     max: 
     labelField: 
   label: Programs
+pages:
+- src/assets/programs.json
