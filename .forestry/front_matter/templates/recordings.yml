@@ -35,3 +35,5 @@ fields:
     max: 
     labelField: 
   label: Recordings
+pages:
+- src/assets/recordings.json
