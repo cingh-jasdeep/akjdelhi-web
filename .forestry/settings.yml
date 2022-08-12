@@ -5,18 +5,14 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: programs.json
+  path: src/assets/programs.json
   label: Programs
-  match: "**/*"
-  read_only: false
 - type: document
-  path: recordings.json
+  path: src/assets/recordings.json
   label: Recordings
-  match: "**/*"
 - type: document
-  path: live.json
+  path: src/assets/live.json
   label: Live
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
