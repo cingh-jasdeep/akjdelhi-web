@@ -1,0 +1,20 @@
+---
+label: Live
+hide_body: true
+fields:
+- type: text
+  name: source
+  label: source
+- type: field_group_list
+  name: recordings
+  label: recordings
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: source
+    label: source
+  - type: text
+    name: url
+    label: url
