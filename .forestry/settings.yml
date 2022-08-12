@@ -5,6 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: src/assets/gurbani.json
+  label: Gurbani
+  match: "**/*"
+- type: document
   path: src/assets/programs.json
   label: Programs
 - type: document
