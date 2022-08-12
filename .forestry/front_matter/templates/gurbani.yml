@@ -20,3 +20,5 @@ fields:
     max: 
     labelField: 
   label: Tuks
+pages:
+- src/assets/gurbani.json
