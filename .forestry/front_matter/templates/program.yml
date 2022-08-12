@@ -1,4 +1,44 @@
 ---
 label: Program
 hide_body: true
-fields: []
+fields:
+- name: programs
+  type: field_group_list
+  fields:
+  - name: poster
+    type: file
+    config:
+      maxSize: 64
+    label: poster
+  - name: location
+    type: text
+    config:
+      required: false
+    label: location
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: start_date
+    type: datetime
+    description: ''
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+    label: Start Date
+  - name: end_date
+    type: datetime
+    label: End date
+    config:
+      required: false
+      date_format: 
+      time_format: 
+      display_utc: false
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Programs
