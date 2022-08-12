@@ -4,45 +4,34 @@ hide_body: true
 fields:
 - name: recordings
   type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: url
+    type: text
+    config:
+      required: true
+    label: Url
+  - name: source
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - YT
+      - FB
+      - mp3
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Source
   config:
     min: 
     max: 
     labelField: 
   label: Recordings
-- name: title
-  type: text
-  config:
-    required: true
-  label: Title
-- name: source
-  type: select
-  default: []
-  config:
-    required: true
-    options:
-    - FB
-    - YT
-    - mp3
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Source
-- name: url
-  type: text
-  config:
-    required: false
-  label: Url
-- name: related_program
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: documents
-      section: programs
-      file: src/assets/programs.json
-      path: programs
-  label: Related program
