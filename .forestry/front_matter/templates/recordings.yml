@@ -1,4 +1,41 @@
 ---
 label: Recordings
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: url
+  type: text
+  config:
+    required: false
+  label: Url
+- name: source
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - FB
+    - YT
+    - mp3
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Source
+- name: related_program
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: programs
+      file: src/assets/programs.json
+      path: programs
+  label: Related program
