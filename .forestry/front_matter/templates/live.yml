@@ -7,20 +7,6 @@ fields:
   config:
     required: true
   label: Url
-- name: title
-  type: text
-  config:
-    required: false
-  label: Title
-- name: end_date
-  type: datetime
-  label: End Date
-  description: ''
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
 - name: source
   type: select
   default: []
@@ -36,3 +22,17 @@ fields:
       file: 
       path: 
   label: Source
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: end_date
+  type: datetime
+  label: End Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
