@@ -1,4 +1,22 @@
 ---
 label: Gurbani
 hide_body: true
-fields: []
+fields:
+- name: tuks
+  type: field_group_list
+  fields:
+  - name: gurbani
+    type: text
+    config:
+      required: true
+    label: Gurbani
+  - name: english_meaning
+    type: text
+    config:
+      required: true
+    label: English Meaning
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Tuks
