@@ -9,17 +9,18 @@ fields:
     type: file
     config:
       maxSize: 64
-    label: poster
+    label: Poster
+    hidden: false
   - name: location
     type: text
     config:
       required: false
-    label: location
+    label: Location
   - name: title
     type: text
     config:
       required: false
-    label: title
+    label: Title
   - name: start_date
     type: datetime
     description: ''
