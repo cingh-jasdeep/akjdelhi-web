@@ -17,7 +17,7 @@ sections:
   path: src/assets/live.json
   label: Live
 upload_dir: src/assets/img
-public_path: "/img"
+public_path: assets/img
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
