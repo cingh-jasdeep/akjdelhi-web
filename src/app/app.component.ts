@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import Gurbani from '../assets/gurbani.json';
+import { LiveService } from './live.service';
+import { ProgramsService } from './programs.service';
+import { RecordingsService } from './recordings.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,13 @@ import Gurbani from '../assets/gurbani.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-project';
+  constructor(public liveService: LiveService, public programsService: ProgramsService,
+    public recordingsService: RecordingsService) {
+
+  }
+  title = 'Akhand Kertanee Jatha, Delhi';
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 }

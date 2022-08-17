@@ -1,0 +1,6 @@
+<div *ngIf="media" class="aspect-video w-full" [ngSwitch]="media.source">
+    <!-- facebook -->
+    <div *ngSwitchCase="mediaType.FB">Facebook{{media | json}}</div>
+    <!-- Youtube -->
+    <div *ngSwitchCase="mediaType.YT">YouTube{{media | json}}</div>
+</div>

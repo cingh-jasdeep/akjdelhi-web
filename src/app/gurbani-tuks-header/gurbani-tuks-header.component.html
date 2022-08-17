@@ -1,0 +1,8 @@
+<div class="{{(gurbaniTuks.currentTuk$ | async) ? 'opacity-100 h-[150px]' : 'opacity-0 w-0 h-0' }} 
+            flex flex-col md:px-5 justify-center  transition-[height,width,opacity] overflow-auto">
+    <div id="Gurbani" class="text-xl text-center w-full ">{{(gurbaniTuks.currentTuk$ | async)?.gurbani}}
+    </div>
+    <div id="Meaning" class="text-sm text-center w-full ">{{(gurbaniTuks.currentTuk$ |
+        async)?.english_meaning}}
+    </div>
+</div>
