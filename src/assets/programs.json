@@ -1,6 +1,13 @@
 {
   "programs": [
     {
+      "title": "16/09/22 Friday Rain Sabai",
+      "poster": "assets/img/whatsapp-image-2022-09-15-at-2-23-34-pm.jpeg",
+      "location": "Gurdwara Bangla Sahib",
+      "start_date": "2022-09-16T17:00:00Z",
+      "end_date": "2022-09-16T21:00:00Z"
+    },
+    {
       "start_date": "2022-08-19T12:08:56Z",
       "end_date": "2022-08-20T12:09:00Z",
       "poster": "assets/img/whatsapp-image-2022-08-12-at-7-41-41-am.jpeg",
