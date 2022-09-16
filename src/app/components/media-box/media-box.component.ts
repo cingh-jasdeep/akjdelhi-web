@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Utils } from 'src/app/utils';
 import { Media } from '../../types/media';
 import { MediaType } from '../../types/media-type';
 
@@ -27,6 +28,7 @@ export class MediaBoxComponent implements OnInit, OnChanges {
   ngOnInit(): void {
   }
 
+  youtube_parser = Utils.youtube_parser;
 
 
 }

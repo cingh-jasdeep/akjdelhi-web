@@ -1,13 +1,32 @@
 <div class="relative flex flex-col justify-center items-center">
-    <mat-spinner class="!absolute z-0"></mat-spinner>
-    <div *ngIf="media" class="z-10 aspect-video w-full flex justify-center items-center" [ngSwitch]="media.source">
-        <!-- facebook -->
-        <div *ngSwitchCase="mediaType.FB" class="fb-video" [attr.data-href]="media.url"
-        data-allowfullscreen="true" data-width="500"></div>
-        <!-- Youtube -->
-        <div *ngSwitchCase="mediaType.YT">YouTube{{media | json}}</div>
-        <!-- MP3 -->
-        <div *ngSwitchCase="mediaType.mp3">MP3{{media | json}}</div>
-    </div>
-    <div>{{media?.title}}</div>
+  <mat-spinner *ngIf="media?.source === mediaType.FB ||media?.source === mediaType.YT " class="!absolute z-0"></mat-spinner>
+  <div
+    *ngIf="media"
+    class="z-10 aspect-video w-full flex justify-center items-center"
+    [ngSwitch]="media.source"
+  >
+    <!-- facebook -->
+    <div
+      *ngSwitchCase="mediaType.FB"
+      class="fb-video"
+      [attr.data-href]="media.url"
+      data-allowfullscreen="true"
+      data-width="500"
+    ></div>
+    <!-- Youtube -->
+    <iframe
+      *ngSwitchCase="mediaType.YT"
+      id="ytplayer"
+      type="text/html"
+      class="w-full h-full"
+      [src]="('https://www.youtube.com/embed/'+youtube_parser(media.url)+'?autoplay=1') | safe: 'resourceUrl'"
+      frameborder="0"
+    ></iframe>
+    <!-- MP3 -->
+    <audio *ngSwitchCase="mediaType.mp3" controls [src]="media.url">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+  </div>
+  <div>{{ media?.title }}</div>
 </div>

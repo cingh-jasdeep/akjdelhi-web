@@ -18,4 +18,11 @@ export class Utils {
             return of(result as T);
         };
     }
+
+    // https://stackoverflow.com/a/8260383/10030480
+    static youtube_parser(url: string) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+        var match = url.match(regExp);
+        return (match && match[7].length == 11) ? match[7] : '';
+    }
 }

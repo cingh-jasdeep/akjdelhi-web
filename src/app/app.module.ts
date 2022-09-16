@@ -13,6 +13,7 @@ import { MediaBoxComponent } from './components/media-box/media-box.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MediaSectionComponent } from './components/media-section/media-section.component';
 import { MatIconModule } from '@angular/material/icon';
+import { SafePipe } from './pipes/safe.pipe';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
     GurbaniTuksHeaderComponent,
     UpcomingSectionComponent,
     MediaBoxComponent,
-    MediaSectionComponent
+    MediaSectionComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,
