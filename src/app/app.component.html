@@ -1,9 +1,9 @@
-<div class=" max-w-5xl border border-slate-200 rounded-3xl m-2 lg:mx-auto md:m-8 
+<div class=" max-w-5xl border border-slate-300 rounded-3xl m-2 lg:mx-auto md:m-8 
 flex flex-col items-center p-2 md:p-4 gap-2">
   <!-- Gurbani tuks -->
   <app-gurbani-tuks-header class="w-full"></app-gurbani-tuks-header>
 
-  <div class="h-[1px] w-full bg-slate-200"></div>
+  <div class="h-[1px] w-full bg-slate-300"></div>
 
   <div class="flex flex-col items-center gap-1">
     <img class=" w-[119px] h-[139px] " src="assets/logo-akj.png" />
@@ -14,19 +14,23 @@ flex flex-col items-center p-2 md:p-4 gap-2">
     <button *ngIf="(programsService.programList$|async)?.length" (click)="scroll(upcoming)"
       mat-stroked-button>Upcoming</button>
     <button *ngIf="(liveService.liveList$|async)?.length" (click)="scroll(live)" mat-stroked-button>Live</button>
-    <button (click)="scroll(recordings)" mat-stroked-button>Recordings</button>
+    <button *ngIf="(recordingsService.recordingList$ |async)?.length" (click)="scroll(recordings)" mat-stroked-button>Recordings</button>
   </div>
 
-  <div class="h-[1px] w-full bg-slate-200"></div>
+  <div class="h-[1px] w-full bg-slate-300"></div>
 
   <!-- live -->
   <div #live class="w-full">
-    <app-live-section *ngIf="(liveService.liveList$|async)?.length"></app-live-section>
+    <app-media-section title="Live" *ngIf="(liveService.liveList$|async)?.length" [mediaList]="(liveService.liveList$|async)"></app-media-section>
   </div>
+  <div class="h-[1px] w-full bg-slate-300"></div>
+
   <div #upcoming class="w-full">
     <app-upcoming-section *ngIf="(programsService.programList$|async)?.length"></app-upcoming-section>
   </div>
+  <div class="h-[1px] w-full bg-slate-300"></div>
+
   <div #recordings class="w-full">
-    <app-recordings-section></app-recordings-section>
+    <app-media-section title="Recordings" *ngIf="(recordingsService.recordingList$ |async)?.length" [mediaList]="(recordingsService.recordingList$|async)"></app-media-section>
   </div>
 </div>

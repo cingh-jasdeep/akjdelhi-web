@@ -1,0 +1,19 @@
+<div *ngIf="mediaList != null && currIndex != null">
+    <h2 class="section-header">{{title}}</h2>
+
+    <div class="flex flex-col gap-1 md:flex-row md:items-center md:justify-center my-2">
+        <button mat-stroked-button class="md:w-auto md:order-1 
+        {{(currIndex < mediaList.length && currIndex > 0) ? '':'!hidden md:!inline-block md:invisible'}}"
+            (click)="currIndex = currIndex - 1">
+            <div>&lt;</div>
+        </button>
+        <app-media-box class="w-full md:w-1/2 order-first md:order-2" [media]="mediaList[currIndex]">
+        </app-media-box>
+        <!-- more button -->
+        <button mat-stroked-button class="md:w-auto flex md:flex-col md:order-3 md:items-center
+        {{currIndex >= 0 && currIndex < mediaList.length - 1?'':'!hidden md:!inline-block md:invisible'}}"
+            (click)="currIndex = currIndex + 1">
+            <span class="inline md:block">More&nbsp;</span><span class="inline md:block">&gt;</span>
+        </button>
+    </div>
+</div>

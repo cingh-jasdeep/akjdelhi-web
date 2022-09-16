@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProgramsService } from '../programs.service';
+import { ProgramsService } from 'src/app/services/programs.service';
+import { Program } from 'src/app/types/program';
 
 @Component({
   selector: 'app-upcoming-section',
@@ -8,6 +9,7 @@ import { ProgramsService } from '../programs.service';
 })
 export class UpcomingSectionComponent implements OnInit {
 
+  selectedProgram: Program | null = null;
   constructor(public programService: ProgramsService) { }
 
   ngOnInit(): void {

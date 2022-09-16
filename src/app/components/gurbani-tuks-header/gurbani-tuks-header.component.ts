@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { GurbaniTuksService } from '../gurbani-tuks.service';
+import { GurbaniTuksService } from 'src/app/services/gurbani-tuks.service';
 
 @Component({
   selector: 'app-gurbani-tuks-header',

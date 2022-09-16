@@ -1,0 +1,9 @@
+<h2 class="section-header">Upcoming</h2>
+<div class="my-2 w-100 overflow-x-auto flex flex-nowrap whitespace-nowrap gap-x-3">
+    <img class="max-h-[400px] w-auto cursor-pointer first:ml-auto last:mr-auto"  *ngFor="let program of (programService.programList$| async)"   [src]="program.poster" [alt]="program.title" (click)="selectedProgram = program">
+</div>
+<div class="fixed w-screen h-screen inset-0 z-[9999]" *ngIf="selectedProgram">
+    <div class="bg-black/5 w-full h-full inset-0 absolute" (click)="selectedProgram = null"></div>
+    <img class="absolute inset-0 object-contain w-auto h-[90%]  m-auto z-10" [src]="selectedProgram.poster" [alt]="selectedProgram.title"/>
+    <button class="!absolute p-2 right-0 top-0 z-20" mat-icon-button (click)="selectedProgram = null"><mat-icon>close</mat-icon></button>
+</div>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { LiveService } from './live.service';
-import { ProgramsService } from './programs.service';
-import { RecordingsService } from './recordings.service';
+import { LiveService } from './services/live.service';
+import { ProgramsService } from './services/programs.service';
+import { RecordingsService } from './services/recordings.service';
 
 @Component({
   selector: 'app-root',

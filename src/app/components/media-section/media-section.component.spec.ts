@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LiveSectionComponent } from './live-section.component';
+import { MediaSectionComponent } from './media-section.component';
 
-describe('LiveSectionComponent', () => {
-  let component: LiveSectionComponent;
-  let fixture: ComponentFixture<LiveSectionComponent>;
+describe('MediaSectionComponent', () => {
+  let component: MediaSectionComponent;
+  let fixture: ComponentFixture<MediaSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LiveSectionComponent ]
+      declarations: [ MediaSectionComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LiveSectionComponent);
+    fixture = TestBed.createComponent(MediaSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

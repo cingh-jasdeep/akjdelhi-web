@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, interval, Observable, of } from 'rxjs';
-import { GurbaniTuk, GurbaniTuks } from './types/gurbani-tuk';
+import { GurbaniTuk, GurbaniTuks } from '../types/gurbani-tuk';
 import { HttpClient } from '@angular/common/http';
-import { Utils } from './utils';
+import { Utils } from '../utils';
 
 @Injectable({
   providedIn: 'root'

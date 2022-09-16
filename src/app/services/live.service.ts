@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError } from 'rxjs';
-import { Live } from './types/live';
-import { MediaType } from './types/media-type';
-import { Utils } from './utils';
+import { Live } from '../types/live';
+import { MediaType } from '../types/media-type';
+import { Utils } from '../utils';
 
 @Injectable({
   providedIn: 'root'

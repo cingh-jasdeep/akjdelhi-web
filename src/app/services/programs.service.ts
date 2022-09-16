@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError } from 'rxjs';
-import { Program } from './types/program';
-import { Utils } from './utils';
+import { Program } from '../types/program';
+import { Utils } from '../utils';
 
 @Injectable({
   providedIn: 'root'

@@ -6,22 +6,22 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
-import { GurbaniTuksHeaderComponent } from './gurbani-tuks-header/gurbani-tuks-header.component';
-import { LiveSectionComponent } from './live-section/live-section.component';
-import { UpcomingSectionComponent } from './upcoming-section/upcoming-section.component';
-import { RecordingsSectionComponent } from './recordings-section/recordings-section.component';
+import { GurbaniTuksHeaderComponent } from './components/gurbani-tuks-header/gurbani-tuks-header.component';
+import { UpcomingSectionComponent } from './components/upcoming-section/upcoming-section.component';
 import { MatButtonModule } from '@angular/material/button';
-import { MediaBoxComponent } from './media-box/media-box.component';
+import { MediaBoxComponent } from './components/media-box/media-box.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MediaSectionComponent } from './components/media-section/media-section.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GurbaniTuksHeaderComponent,
-    LiveSectionComponent,
     UpcomingSectionComponent,
-    RecordingsSectionComponent,
-    MediaBoxComponent
+    MediaBoxComponent,
+    MediaSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,9 @@ import { MediaBoxComponent } from './media-box/media-box.component';
     BrowserAnimationsModule,
     MatSliderModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
