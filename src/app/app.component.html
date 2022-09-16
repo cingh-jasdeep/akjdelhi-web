@@ -17,18 +17,17 @@ flex flex-col items-center p-2 md:p-4 gap-2">
     <button *ngIf="(recordingsService.recordingList$ |async)?.length" (click)="scroll(recordings)" mat-stroked-button>Recordings</button>
   </div>
 
-  <div class="h-[1px] w-full bg-slate-300"></div>
-
+  <div *ngIf="(liveService.liveList$|async)?.length"  class="h-[1px] w-full bg-slate-300"></div>
   <!-- live -->
   <div #live class="w-full">
     <app-media-section title="Live" *ngIf="(liveService.liveList$|async)?.length" [mediaList]="(liveService.liveList$|async)"></app-media-section>
   </div>
-  <div class="h-[1px] w-full bg-slate-300"></div>
+  <div *ngIf="(programsService.programList$|async)?.length" class="h-[1px] w-full bg-slate-300"></div>
 
   <div #upcoming class="w-full">
     <app-upcoming-section *ngIf="(programsService.programList$|async)?.length"></app-upcoming-section>
   </div>
-  <div class="h-[1px] w-full bg-slate-300"></div>
+  <div *ngIf="(recordingsService.recordingList$ |async)?.length" class="h-[1px] w-full bg-slate-300"></div>
 
   <div #recordings class="w-full">
     <app-media-section title="Recordings" *ngIf="(recordingsService.recordingList$ |async)?.length" [mediaList]="(recordingsService.recordingList$|async)"></app-media-section>
